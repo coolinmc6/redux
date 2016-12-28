@@ -77,6 +77,12 @@ state (store.getState())
 ```
 
 ### Video 9 - Redux: Avoiding Array Mutations with concat(), slice(), and spread
+- We get the test to pass but then we add deepFreeze(listBefore) which freezes the
+array and the test fails
+- We are trying to AVOID changing the array
+- So instead of doing list.push and then returning the list we are simply returning
+list.concat([0]) which allows the test to pass
+- CM => I need to learn more about the spread operator
 
 
 
