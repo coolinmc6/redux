@@ -83,6 +83,59 @@ array and the test fails
 - So instead of doing list.push and then returning the list we are simply returning
 list.concat([0]) which allows the test to pass
 - CM => I need to learn more about the spread operator
+- for the addCounter, removeCounter, and incrementCounter functions, there are three ways
+to perform the action: (#1) mutating the array, (#2) not mutating the array, and (#3) not 
+mutating the array with es6 syntax
 
+
+### Video 10 - Redux: Avoiding Object Mutations with Object.assign() and ...spread
+```javascript
+const toggleTodo = (todo) => {
+	return Object.assign({}, todo, {
+		completed: !todo.completed
+	});
+};
+```
+- the Object.assign method is just like the assignment operator.  We are assigning the
+left side, which is the first argument between the parens, an empty object. Every further
+argument is assigned to the target object.
+  - we can override the 'completed' property because the last one wins
+- He also discusses the spread operator which is not available in es6 but can be used
+in Babel with the stage-2 preset
+
+### Video 11 - Redux: Writing a Todo List Reducer (Adding a Todo)
+- a reducer is a pure function you write to implement the update logic of your application
+to figure out the next state is calculated given what the current state AND the action
+that is dispatched
+- Here is a quick run-down of what is happening in the code:
+  1. the testAddTodo() function is called (line 40)
+  2. testAddTodo() creates an empty array (stateBefore) and an object called 'action' with
+  three properties: type, id, and text
+  3. testAddTodo() also creates a stateAfter array which contains on object, also with three
+  properties
+  4. After using deepFreeze on the stateBefore and action items, it uses the expect library
+  to call the todos() function and expects it to equal stateAfter
+  5. todos() takes two arguments which we've entered as stateBefore (for the state variable)
+  and action (for the action variable)
+  6. todos() uses a switch to check if the action variable's property 'type' (action.type) is 
+  equal to 'ADD_TODO', which it is...
+  7. ...it then returns an array with one object in it...its properties are set to whatever
+  was given in the action (e.g. id: action.id, text: action.text) while another property
+  'completed' is set to false.
+    - NOTE: the object is added using the spread operator: ...array_name and then a comma =>
+    '...state,' and then the object.  See the v9.js for more on that and how else I could add
+    to an array
+  8. Lastly, because stateBefore and action are not altered and we arrived at our desired
+  result, stateAfter, 'All tests passed' is displayed
+
+### Video 12 - Redux: Writing a Todo List Reducer (Toggling a Todo)
+- builds off the code from the last video
+- 
+
+### Video 13 - Redux: Reducer Composition with Arrays
+- also builds off the code from v11
+- STOP
+
+### Video 14 - Redux: Reducer Composition with Objects 
 
 
