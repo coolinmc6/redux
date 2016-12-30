@@ -134,8 +134,61 @@ that is dispatched
 
 ### Video 13 - Redux: Reducer Composition with Arrays
 - also builds off the code from v11
-- STOP
+
 
 ### Video 14 - Redux: Reducer Composition with Objects 
+- 
+
+### Video 15 - Redux: Reducer Composition with combineReducers()
+- we learned how to use the reducer composition pattern to let different reducers to handle
+different parts of the state tree and then combine their results
+- the combine reducers is so common that they've created a function for you
+- always name reducers after the state keys that they manage
+
+### Video 16 - Redux: Implementing combineReducers() from Scratch
+- this lesson we implement the combineReducers utility function from scratch
+- I should review the reduce function before I do this video again
+
+### Video 17 - Redux: React Todo List Example (Adding a Todo)
+- looks like a "reset" of the code...maybe back to video 8?  It goes back a good bit
+- you see the top parts of the code near the end
+- great run through of the todo list example
+
+### Video 18 - Redux: React Todo List Example (Toggling a Todo)
+- good run-through of the toggle
+
+### Video 19 - Redux: React Todo List Example (Filtering Todos)
+- longer video (~8 mins)
+- how does e.preventDefault() work?
+- really good, watch again
+
+### Video 20 - 
+
+### Video 21 - 
+
+### Video 22 - 
+
+### Video 23 - 
+
+### Video 24 - 
+
+### Video 25 - 
+
+### Video 26 - 
+
+### Video 27 - 
+
+### Video 28 - 
+
+### Video 29 - 
+
+### Video 30 - 
+
+
+
+
+
+
+
 
 
