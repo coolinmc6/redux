@@ -162,17 +162,53 @@ different parts of the state tree and then combine their results
 - how does e.preventDefault() work?
 - really good, watch again
 
-### Video 20 - 
+### Video 20 - Redux: Extracting Presentational Components (Todo, TodoList)
+- refactor all that code and break it into multiple components
+- onClick, completed, and text are props
+- Todo, TodoList
+- the TodoList is the container component
 
-### Video 21 - 
 
-### Video 22 - 
+### Video 21 - Redux: Extracting Presentational Components (AddTodo, Footer, FilterLink)
+- a lot of things that I didn't follow
+- data flow run-through around 4:12
+- single container component called TodoApp that is re-rendered every time the store 
+is changed
+- it receives the todos and visibilityFilter props
+- onAddClick function is a prop for the AddTodo component
+- the TodoList component receives an array of todos and maps over them rendering 
+individual Todo components
+- it uses the spread operator to spread every property of the todo object to the Todo
+component
+- good run through that I'll need to watch again, probably a couple times
 
-### Video 23 - 
 
-### Video 24 - 
+### Video 22 - Redux: Extracting Container Components (FilterLink)
+- the TodoApp specifies the behaviors; the others ones don't do anything with
+actions, it passes it to the TodoApp via props
+- Another refactor => extract container components.  Currently, the parents need 
+to know too much of what the children components need 
+- 
 
-### Video 25 - 
+### Video 23 - Redux: Extracting Container Components (VisibleTodoList, AddTodo)
+- all container components are similar => connect a presentational component to
+the Redux store AND specify the data and the behavior that it needs
+- just one ReactDOM.render() call at the end
+- the AddTodo is kinda both a presentational component and container component;
+they are kept together for ease
+- the VisibleTodoList is a proper container component
+- the Footer is a presentational component rendering three different FilterLink
+- the FilterLink is a container component so it subscribes to the store and it
+renders the presentational component called Link
+- Link is a presentational component that renders an a-tag
+- He recommends separating presentational and container components
+
+### Video 24 - Redux: Passing the Store Down Explicitly via Props
+- es6 construction syntax
+
+
+### Video 25 - Redux: Passing the Store Down Implicitly via Context
+- 
 
 ### Video 26 - 
 
