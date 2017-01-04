@@ -20,6 +20,12 @@ npm i babel-preset-es2015
 ```
   - when it wasn't rendering, I moved my v08.js script tag to below my div#root
 
+## Next Steps
+- 01/03/17 => one run-through done but I'll need to run through again, maybe after I've done
+another React-Redux tutorial or two.  There are a ton of good things to learn here, it needs at 
+least a day to rip through and get the code and actually learn something
+
+
 ## Egghead.io: Getting Started with Redux
 
 ### Video 5
@@ -208,17 +214,31 @@ renders the presentational component called Link
 
 
 ### Video 25 - Redux: Passing the Store Down Implicitly via Context
+- React feature called context
+- we now pass the context down implicitly
+- the providers component renders whatever you pass it
+- it also provides the context for grandchildren
+- I think allos me to just set the context and not set the props on one component and
+its child component JUST to pass it down to its child
+- the context is not a stable API and has changed before, try not to rely on it too much
+
+### Video 26 - Redux - Passing the Store Down with &lt;Provider&gt;
+- imported the Provider via the React-Redux library which is a binder
+
+### Video 27 - Redux - Generating Containers with connect() from React Redux (VisibleTodoList)
 - 
 
-### Video 26 - 
+### Video 28 - Redux - Generating Containers with connect() from React Redux (AddTodo)
+- 
 
-### Video 27 - 
+### Video 29 - Redux - Generating Containers with connect() from React Redux (FooterLink)
+- writing the mapStateToLinkProps function
+- writing the mapDispatchToLinkProprs function
+- call connect function (FilterLink)
+- 
 
-### Video 28 - 
-
-### Video 29 - 
-
-### Video 30 - 
+### Video 30 - Extracting Action Creators
+- 
 
 
 
