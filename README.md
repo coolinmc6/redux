@@ -28,9 +28,51 @@ least a day to rip through and get the code and actually learn something
 
 ## Egghead.io: Getting Started with Redux
 
-### Video 5
+### Video 1: The Single Immutable State Tree
+- Everything that changes in your application, including the data and UI state, is 
+included in a single JavaScript object called 'state' or the 'state tree'
+- First Principle of Redux: your entire application state is stored in an object tree
+inside a single store
 
-### Video 6
+### Video 2: Describing State Changes with Actions
+- The Second Principle of Redux: state is read-only; it cannot be modified or mutated.
+- To change state, you dispatch an action describing that change
+- the action is the minimal representation of that change
+- The components don't know what's happening but they just have to dispatch an action
+- The state is read-only; the only way to change the state tree is by dispatching an
+action.  Actions are plain JS object describing in a minimal way what is changing with
+the application state
+
+### Video 3: Pure and Impure Functions
+- Pure functions do not have any observable side-effects such as network or database
+calls.
+- Pure functions do not modify the values passed to them
+- Impure functions may call the database or network, they may override the values you
+pass to them, etc.
+
+### Video 4: The Reducer Function
+- The state mutations in your app need to be described as a pure function that takes 
+the previous state and the action being dispatched and returns the next state of your
+application.
+- It cannot modify the previous state
+- Third Principle of Redux: to describe state mutations, you have to write a function that
+takes the previous state of the app AND an action being dispatched and then return the
+next step of the app.  This function has to be 'pure'; this function is called a 'reducer'.
+
+### Quick Review
+- First Principle of Redux: your entire application state is stored in an object tree
+inside a single store
+- The Second Principle of Redux: state is read-only; it cannot be modified or mutated.
+- Third Principle of Redux: to describe state mutations, you have to write a function that
+takes the previous state of the app AND an action being dispatched and then return the
+next step of the app.
+- a reducer is a function that takes the current state and an action and then returns
+the next state of the application
+
+### Video 5: Writing a Counter Reducer with Tests
+
+
+### Video 6: Store Methods: getState(), dispatch(), and subscribe()
 
 - store is created which we use to tell it that the reducer is 'counter'
 - the store has three important methods (getState(), dispatch({}), and subscribe():
