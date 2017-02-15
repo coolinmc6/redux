@@ -70,7 +70,14 @@ next step of the app.
 the next state of the application
 
 ### Video 5: Writing a Counter Reducer with Tests
-
+- First one of the key lessons in this is that using if-else statements don't really work because 
+of all the different cases there could be.  Using a switch is better and cleaner; if none
+of the cases apply, simply return state.
+- Notice that in each expect statement, we are calling our reducer, `counter()`, and we are
+passing it two arguments: our current state (or whatever the count is now) and an object
+with just one key, 'type'.  
+- This looks super simple BUT just to try it, I also gave each test object a payload.  So despite 
+looking like an oversimplification, this matches up exactly with what I've learned to be 'reducers'.
 
 ### Video 6: Store Methods: getState(), dispatch(), and subscribe()
 
